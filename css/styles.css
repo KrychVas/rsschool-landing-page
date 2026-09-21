@@ -62,23 +62,25 @@ main {
   opacity: 0.8;
 }
 
-.logo img {
+.logo__img {
   display: block;
+  width: 100px;
+  height: 60px;
 }
 
-.logo__img--dark {
+.logo .logo__img--dark {
   display: none;
 }
 
-.logo__img--light {
+.logo .logo__img--light {
   display: block;
 }
 
-[data-theme="dark"] .logo__img--light {
+[data-theme='dark'] .logo .logo__img--light {
   display: none;
 }
 
-[data-theme="dark"] .logo__img--dark {
+[data-theme='dark'] .logo .logo__img--dark {
   display: block;
 }
 
