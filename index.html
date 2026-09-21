@@ -1,10 +1,11 @@
 <!DOCTYPE html>
 <html lang="en" data-theme="light">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Coffee House</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Coffee House</title>
+  <link rel="icon" href="assets/icons/logo.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:ital,wght@0,400;0,600;1,600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/reset.css">
@@ -14,18 +15,20 @@
 </head>
 <body>
 
-    <!-- Шапка сайту (спільна для обох сторінок) -->
-    <header class="site-header" id="top">
+  <!-- Шапка сайту (спільна для обох сторінок) -->
+  <header class="site-header" id="top">
     <div class="container header-menu">
-      <a href="#top" class="logo" aria-label="Resource Coffee House">
-        <img src="assets/icons/logo.svg" alt="Resource Coffee House" width="100" height="60">
+      <a href="#top" class="logo" aria-label="Coffee House">
+        <img src="assets/icons/logo.svg" alt="Coffee House logo" width="100" height="60">
       </a>
 
       <nav class="nav" aria-label="Main navigation">
-        <a class="menu-item" href="#favorite-coffee">Favorite coffee</a>
-        <a class="menu-item" href="#about">About</a>
-        <a class="menu-item" href="#mobile-app">Mobile app</a>
-        <a class="menu-item" href="#contacts">Contact us</a>
+        <ul class="nav-list">
+          <li><a class="menu-item" href="#favorite-coffee">Favorite coffee</a></li>
+          <li><a class="menu-item" href="#about">About</a></li>
+          <li><a class="menu-item" href="#mobile-app">Mobile app</a></li>
+          <li><a class="menu-item" href="#contacts">Contact us</a></li>
+        </ul>
       </nav>
 
       <div class="header-actions">
@@ -38,58 +41,44 @@
           </span>
         </button>
 
-        <a class="menu-item menu-item--cta" href="#menu">
-          Menu
+        <a class="menu-item menu-item--cta" href="menu.html">
+          <span>Menu</span>
           <img src="assets/icons/coffee-cup.svg" alt="" width="20" height="20">
         </a>
 
-        <button class="burger-btn" id="burgerOpen" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="mobileMenu">
-          <img src="assets/icons/menu.svg" alt="" width="16" height="8">
+        <button class="burger-btn" id="burgerBtn" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="mobileMenu">
+          <span class="burger-line burger-line--top"></span>
+          <span class="burger-line burger-line--bottom"></span>
         </button>
       </div>
     </div>
   </header>
 
-    <div class="mobile-menu" id="mobileMenu" hidden>
-    <div class="container header-menu">
-      <a href="#top" class="logo" aria-label="Resource Coffee House">
-        <img src="assets/icons/logo.svg" alt="Resource Coffee House" width="100" height="60">
-      </a>
-      <div class="header-actions">
-        <button class="theme-switch" id="themeToggleMobile" type="button" aria-label="Switch theme" aria-pressed="false">
-          <span class="theme-switch__icon theme-switch__icon--sun">
-            <img src="assets/icons/sun.svg" alt="" width="20" height="20">
-          </span>
-          <span class="theme-switch__icon theme-switch__icon--moon">
-            <img src="assets/icons/moon.svg" alt="" width="20" height="20">
-          </span>
-        </button>
-        <button class="burger-btn" id="burgerClose" type="button" aria-label="Close menu">
-          <img src="assets/icons/close.svg" alt="" width="16" height="16">
-        </button>
-      </div>
-    </div>
+  <!-- Мобільне бургер-меню -->
+  <div class="mobile-menu" id="mobileMenu" hidden>
     <nav class="mobile-nav" aria-label="Mobile navigation">
-      <a href="#favorite-coffee">Favorite coffee</a>
-      <a href="#about">About</a>
-      <a href="#mobile-app">Mobile app</a>
-      <a href="#contacts">Contact us</a>
-      <a class="mobile-nav__cta" href="#menu">
-        Menu
+      <ul class="mobile-nav-list">
+        <li><a class="mobile-nav-link" href="#favorite-coffee">Favorite coffee</a></li>
+        <li><a class="mobile-nav-link" href="#about">About</a></li>
+        <li><a class="mobile-nav-link" href="#mobile-app">Mobile app</a></li>
+        <li><a class="mobile-nav-link" href="#contacts">Contact us</a></li>
+      </ul>
+      <a class="mobile-nav__cta" href="menu.html">
+        <span>Menu</span>
         <img src="assets/icons/coffee-cup.svg" alt="" width="32" height="32">
       </a>
     </nav>
   </div>
 
-    <!-- Основний контент головної сторінки -->
-    <main>
+  <!-- Основний контент головної сторінки -->
+  <main>
     <section class="hero">
       <div class="container-hero">
-        <img class="hero-bg" src="assets/img/hero.jpg" alt="" onerror="this.style.display='none'">
+        <img class="hero-bg" src="assets/images/img-hero.png" alt="" aria-hidden="true">
         <div class="hero-content">
           <h1><span class="accent">Enjoy</span> premium coffee at our charming cafe</h1>
           <p>With its inviting atmosphere and delicious coffee options, the Coffee House Resource is a popular destination for coffee lovers and those seeking a warm and inviting space to enjoy their favorite beverage.</p>
-          <a class="btn-primary" href="#menu">Menu</a>
+          <a class="btn-primary" href="menu.html">Menu</a>
         </div>
       </div>
     </section>
@@ -99,26 +88,26 @@
         <h2>Choose your <span class="accent">favorite</span> coffee</h2>
 
         <div class="slider" id="coffeeSlider">
-          <button class="slider-arrow slider-arrow--prev" type="button" aria-label="Previous coffee">
+          <button class="slider-arrow slider-arrow--prev" id="sliderPrev" type="button" aria-label="Previous slide">
             <img src="assets/icons/arrow-left.svg" alt="" width="24" height="24">
           </button>
 
           <div class="slider-viewport">
-            <ul class="slider-track">
+            <ul class="slider-track" id="sliderTrack">
               <li class="slide">
-                <img src="assets/images/coffee-1.png" alt="S'mores Frappuccino" onerror="this.style.background='var(--color-border-primary)'">
+                <img src="assets/images/coffee-slider-1.png" alt="S'mores Frappuccino">
                 <h3>S'mores Frappuccino</h3>
                 <p>This new drink takes an espresso and mixes it with brown sugar and cinnamon before being topped with oat milk.</p>
                 <p class="price">$5.50</p>
               </li>
               <li class="slide">
-                <img src="assets/images/coffee-2.png" alt="Caramel Macchiato" onerror="this.style.background='var(--color-border-primary)'">
+                <img src="assets/images/coffee-slider-2.png" alt="Caramel Macchiato">
                 <h3>Caramel Macchiato</h3>
                 <p>Fragrant and unique classic espresso with rich caramel-peanut syrup, with cream under whipped thick foam.</p>
                 <p class="price">$5.00</p>
               </li>
               <li class="slide">
-                <img src="assets/images/coffee-3.png" alt="Ice coffee" onerror="this.style.background='var(--color-border-primary)'">
+                <img src="assets/images/coffee-slider-3.png" alt="Ice coffee">
                 <h3>Ice coffee</h3>
                 <p>A popular summer drink that tones and invigorates. Prepared from coffee, milk and ice.</p>
                 <p class="price">$4.50</p>
@@ -126,12 +115,16 @@
             </ul>
           </div>
 
-          <button class="slider-arrow slider-arrow--next" type="button" aria-label="Next coffee">
+          <button class="slider-arrow slider-arrow--next" id="sliderNext" type="button" aria-label="Next slide">
             <img src="assets/icons/arrow-right.svg" alt="" width="24" height="24">
           </button>
         </div>
 
-        <div class="slider-dots" id="sliderDots" role="tablist" aria-label="Choose slide"></div>
+        <div class="slider-dots" id="sliderDots" role="tablist" aria-label="Choose slide">
+          <button type="button" class="slider-dot active" role="tab" aria-selected="true" aria-label="Go to slide 1"><span class="slider-dot__progress"></span></button>
+          <button type="button" class="slider-dot" role="tab" aria-selected="false" aria-label="Go to slide 2"><span class="slider-dot__progress"></span></button>
+          <button type="button" class="slider-dot" role="tab" aria-selected="false" aria-label="Go to slide 3"><span class="slider-dot__progress"></span></button>
+        </div>
       </div>
     </section>
 
@@ -142,18 +135,18 @@
         <div class="about-images">
           <div class="about-col">
             <div class="about-box about-box--tall">
-              <img src="assets/images/about-1.png" alt="" onerror="this.style.background='var(--color-border-primary)'">
+              <img src="assets/images/about-1.png" alt="Cozy cafe interior">
             </div>
             <div class="about-box about-box--short">
-              <img src="assets/images/about-2.png" alt="" onerror="this.style.background='var(--color-border-primary)'">
+              <img src="assets/images/about-2.png" alt="Freshly brewed coffee cup">
             </div>
           </div>
           <div class="about-col">
             <div class="about-box about-box--short">
-              <img src="assets/images/about-3.png" alt="" onerror="this.style.background='var(--color-border-primary)'">
+              <img src="assets/images/about-3.png" alt="Coffee beans assortment">
             </div>
             <div class="about-box about-box--tall">
-              <img src="assets/images/about-4.png" alt="" onerror="this.style.background='var(--color-border-primary)'">
+              <img src="assets/images/about-4.png" alt="Coffee preparation bar">
             </div>
           </div>
         </div>
@@ -166,44 +159,64 @@
           <h2><span class="accent">Download</span> our app<br>to start ordering</h2>
           <p>Download the Resource app today and experience the comfort of ordering your favorite coffee from wherever you are</p>
           <div class="app-buttons">
-            <a class="btn-outline" href="#">
+            <a class="btn-outline" href="https://www.apple.com/app-store/" target="_blank" rel="noopener noreferrer">
               <img src="assets/icons/apple.svg" alt="" width="28" height="28">
               <span><small>Available on the</small>App Store</span>
             </a>
-            <a class="btn-outline" href="#">
+            <a class="btn-outline" href="https://play.google.com/store" target="_blank" rel="noopener noreferrer">
               <img src="assets/icons/google-play.svg" alt="" width="28" height="28">
               <span><small>Available on</small>Google Play</span>
             </a>
           </div>
         </div>
-        <img class="mobile-screens" src="assets/images/mobile-screens.png" alt="" onerror="this.style.display='none'">
+        <img class="mobile-screens" src="assets/images/mobile-screens.png" alt="Resource Mobile App Screens" width="630" height="630">
       </div>
     </section>
-
   </main>
 
-    <!-- Підвал сайту (спільний для обох сторінок) -->
-    <footer class="contacts" id="contacts">
-      <div class="container contacts-inner">
-        <div class="offer">
-          <h2>Sip, Savor, Smile. <span class="accent">It's coffee time!</span></h2>
-          <div class="socials">
-            <a href="#" aria-label="Twitter"><img src="assets/icons/twitter.svg" alt="" width="24" height="24"></a>
-            <a href="#" aria-label="Instagram"><img src="assets/icons/instagram.svg" alt="" width="24" height="24"></a>
-            <a href="#" aria-label="Facebook"><img src="assets/icons/facebook.svg" alt="" width="24" height="24"></a>
-          </div>
-        </div>
-        <div class="contacts-info">
-          <h3>Contact us</h3>
-          <ul class="contacts-list">
-            <li><img src="assets/icons/pin.svg" alt="" width="20" height="20"> 8558 Green Rd., LA</li>
-            <li><img src="assets/icons/phone.svg" alt="" width="20" height="20"> +1 (603) 555-0123</li>
-            <li><img src="assets/icons/clock.svg" alt="" width="20" height="20"> Mon–Sat: 9:00–23:00</li>
-          </ul>
+  <!-- Підвал сайту (спільний для обох сторінок) -->
+  <footer class="contacts" id="contacts">
+    <div class="container contacts-inner">
+      <div class="offer">
+        <h2>Sip, Savor, Smile. <span class="accent">It's coffee time!</span></h2>
+        <div class="socials">
+          <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" aria-label="Twitter">
+            <img src="assets/icons/twitter.svg" alt="" width="24" height="24">
+          </a>
+          <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+            <img src="assets/icons/instagram.svg" alt="" width="24" height="24">
+          </a>
+          <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
+            <img src="assets/icons/facebook.svg" alt="" width="24" height="24">
+          </a>
         </div>
       </div>
-    </footer>
+      <div class="contacts-info">
+        <h3>Contact us</h3>
+        <ul class="contacts-list">
+          <li>
+            <a class="contacts-link" href="https://maps.google.com/?q=8558+Green+Rd+LA" target="_blank" rel="noopener noreferrer">
+              <img src="assets/icons/pin.svg" alt="" width="20" height="20">
+              <span>8558 Green Rd., LA</span>
+            </a>
+          </li>
+          <li>
+            <a class="contacts-link" href="tel:+16035550123">
+              <img src="assets/icons/phone.svg" alt="" width="20" height="20">
+              <span>+1 (603) 555-0123</span>
+            </a>
+          </li>
+          <li>
+            <span class="contacts-link contacts-link--static">
+              <img src="assets/icons/clock.svg" alt="" width="20" height="20">
+              <span>Mon–Sat: 9:00–23:00</span>
+            </span>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </footer>
 
-    
+  <script src="js/theme.js"></script>
 </body>
 </html>
