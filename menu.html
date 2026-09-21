@@ -150,8 +150,17 @@
               class="tab-item active"
               role="tab"
               aria-selected="true"
+              aria-controls="menuGrid"
+              id="tabCoffee"
             >
-              <span class="tab-item__icon">☕</span>
+              <span class="tab-item__icon">
+                <img
+                  src="assets/icons/icon-cofee.png"
+                  alt=""
+                  width="30"
+                  height="30"
+                />
+              </span>
               <span>Coffee</span>
             </button>
             <button
@@ -159,8 +168,17 @@
               class="tab-item"
               role="tab"
               aria-selected="false"
+              aria-controls="menuGrid"
+              id="tabTea"
             >
-              <span class="tab-item__icon">🫖</span>
+              <span class="tab-item__icon">
+                <img
+                  src="assets/icons/icon-tea.png"
+                  alt=""
+                  width="30"
+                  height="30"
+                />
+              </span>
               <span>Tea</span>
             </button>
             <button
@@ -168,8 +186,17 @@
               class="tab-item"
               role="tab"
               aria-selected="false"
+              aria-controls="menuGrid"
+              id="tabDessert"
             >
-              <span class="tab-item__icon">🍰</span>
+              <span class="tab-item__icon">
+                <img
+                  src="assets/icons/icon-desert.png"
+                  alt=""
+                  width="30"
+                  height="30"
+                />
+              </span>
               <span>Dessert</span>
             </button>
           </div>
@@ -178,13 +205,15 @@
 
       <section class="menu-grid-section">
         <div class="container">
+          <h2 class="visually-hidden">Menu items</h2>
           <div
             class="menu-grid"
             id="menuGrid"
             role="tabpanel"
             aria-label="Category items"
+            tabindex="0"
           >
-            <button type="button" class="product-card">
+            <article class="product-card">
               <div class="product-card__img-wrap">
                 <img
                   class="product-card__img"
@@ -202,9 +231,9 @@
                 </div>
                 <p class="product-card__price">$7.00</p>
               </div>
-            </button>
+            </article>
 
-            <button type="button" class="product-card">
+            <article class="product-card">
               <div class="product-card__img-wrap">
                 <img
                   class="product-card__img"
@@ -222,9 +251,9 @@
                 </div>
                 <p class="product-card__price">$7.00</p>
               </div>
-            </button>
+            </article>
 
-            <button type="button" class="product-card">
+            <article class="product-card">
               <div class="product-card__img-wrap">
                 <img
                   class="product-card__img"
@@ -239,9 +268,9 @@
                 </div>
                 <p class="product-card__price">$5.50</p>
               </div>
-            </button>
+            </article>
 
-            <button type="button" class="product-card">
+            <article class="product-card">
               <div class="product-card__img-wrap">
                 <img
                   class="product-card__img"
@@ -258,9 +287,9 @@
                 </div>
                 <p class="product-card__price">$5.00</p>
               </div>
-            </button>
+            </article>
 
-            <button type="button" class="product-card">
+            <article class="product-card">
               <div class="product-card__img-wrap">
                 <img
                   class="product-card__img"
@@ -275,9 +304,9 @@
                 </div>
                 <p class="product-card__price">$4.50</p>
               </div>
-            </button>
+            </article>
 
-            <button type="button" class="product-card">
+            <article class="product-card">
               <div class="product-card__img-wrap">
                 <img
                   class="product-card__img"
@@ -295,9 +324,9 @@
                 </div>
                 <p class="product-card__price">$5.50</p>
               </div>
-            </button>
+            </article>
 
-            <button type="button" class="product-card">
+            <article class="product-card">
               <div class="product-card__img-wrap">
                 <img
                   class="product-card__img"
@@ -312,9 +341,9 @@
                 </div>
                 <p class="product-card__price">$5.50</p>
               </div>
-            </button>
+            </article>
 
-            <button type="button" class="product-card">
+            <article class="product-card">
               <div class="product-card__img-wrap">
                 <img
                   class="product-card__img"
@@ -329,7 +358,7 @@
                 </div>
                 <p class="product-card__price">$6.50</p>
               </div>
-            </button>
+            </article>
           </div>
 
           <div class="menu-load-more" id="loadMoreContainer">
