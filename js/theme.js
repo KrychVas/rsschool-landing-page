@@ -14,7 +14,9 @@
     if (favicon) {
       favicon.setAttribute(
         'href',
-        theme === 'dark' ? 'assets/icons/logo-dark.svg' : 'assets/icons/logo-light.svg'
+        theme === 'dark'
+          ? 'assets/icons/logo-dark.svg'
+          : 'assets/icons/logo-light.svg',
       );
     }
   }
