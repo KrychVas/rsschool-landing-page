@@ -335,7 +335,7 @@ main {
   justify-content: center;
   gap: 8px;
   background-color: var(--color-text-inverse);
-  color: var(--color-bg-page);
+  color: #403f3d;
   font-weight: 600;
   font-size: var(--fs-body);
   padding: 20px 78px;
@@ -349,7 +349,7 @@ main {
 
 .btn-primary:hover {
   background-color: var(--color-accent);
-  color: var(--color-text-inverse);
+  color: #403f3d;
 }
 
 /* ==== Section headings ==== */
