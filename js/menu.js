@@ -64,12 +64,17 @@
 
   /** Number of items shown on a single page for the current viewport. */
   function pageSize() {
-    return isMobile() ? MOBILE_PAGE_SIZE : categoryProducts(currentCategory).length;
+    return isMobile()
+      ? MOBILE_PAGE_SIZE
+      : categoryProducts(currentCategory).length;
   }
 
   function totalPages() {
     var size = pageSize();
-    return Math.max(1, Math.ceil(categoryProducts(currentCategory).length / size));
+    return Math.max(
+      1,
+      Math.ceil(categoryProducts(currentCategory).length / size),
+    );
   }
 
   /* ------------------------------------------------------------------ */
@@ -195,12 +200,21 @@
   /* Category tabs                                                      */
   /* ------------------------------------------------------------------ */
 
+  /**
+   * Resolve the category a tab points to. Prefer the explicit `data-category`
+   * attribute; fall back to the tab order so the tabs keep working even if the
+   * attribute is missing.
+   */
+  function tabCategory(tab, index) {
+    return tab.dataset.category || categories()[index];
+  }
+
   function selectCategory(category) {
     currentCategory = category;
     currentPage = 1;
 
-    tabs.forEach(function (tab) {
-      var isActive = tab.dataset.category === category;
+    tabs.forEach(function (tab, index) {
+      var isActive = tabCategory(tab, index) === category;
       tab.classList.toggle('active', isActive);
       tab.setAttribute('aria-selected', String(isActive));
     });
@@ -209,9 +223,9 @@
   }
 
   function initTabs() {
-    tabs.forEach(function (tab) {
+    tabs.forEach(function (tab, index) {
       tab.addEventListener('click', function () {
-        selectCategory(tab.dataset.category);
+        selectCategory(tabCategory(tab, index));
       });
     });
   }
