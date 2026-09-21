@@ -1,5 +1,0 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 60" width="100" height="60">
-  <circle cx="63" cy="20" r="19" fill="var(--icon-accent,#B0907A)"/>
-  <text x="50" y="30" font-family="Georgia, 'Times New Roman', serif" font-style="italic" font-weight="700" font-size="26" fill="var(--icon-primary,#403F3D)" text-anchor="middle">Resource</text>
-  <text x="50" y="46" font-family="Arial, sans-serif" font-weight="700" font-size="8" letter-spacing="2" fill="var(--icon-primary,#403F3D)" text-anchor="middle">COFFEE HOUSE</text>
-</svg>

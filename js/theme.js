@@ -10,6 +10,13 @@
     toggles.forEach(function (btn) {
       btn.setAttribute('aria-pressed', String(theme === 'dark'));
     });
+    var favicon = document.querySelector('link[rel="icon"]');
+    if (favicon) {
+      favicon.setAttribute(
+        'href',
+        theme === 'dark' ? 'assets/icons/logo-dark.svg' : 'assets/icons/logo-light.svg'
+      );
+    }
   }
 
   function currentTheme() {

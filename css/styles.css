@@ -66,6 +66,22 @@ main {
   display: block;
 }
 
+.logo__img--dark {
+  display: none;
+}
+
+.logo__img--light {
+  display: block;
+}
+
+[data-theme="dark"] .logo__img--light {
+  display: none;
+}
+
+[data-theme="dark"] .logo__img--dark {
+  display: block;
+}
+
 .nav-list {
   display: flex;
   align-items: center;
