@@ -185,46 +185,51 @@
   font-size: var(--fs-h3);
 }
 
-/* ==== Load More Button ==== */
-.menu-load-more {
+/* ==== Pagination ==== */
+.pagination {
   display: flex;
   justify-content: center;
   align-items: center;
+  gap: 12px;
   margin-top: 40px;
+  flex-wrap: wrap;
 }
 
-.menu-load-more[hidden] {
+.pagination[hidden] {
   display: none !important;
 }
 
-.btn-load-more {
-  width: 60px;
-  height: 60px;
+.pagination__btn {
+  min-width: 44px;
+  height: 44px;
+  padding: 0 12px;
   border-radius: 50%;
-  border: 1px solid var(--color-border-inverse);
+  border: 1px solid var(--color-border-primary);
   background: transparent;
   color: var(--color-text-primary);
+  font-weight: 600;
+  font-size: var(--fs-body);
+  cursor: pointer;
   display: flex;
   align-items: center;
   justify-content: center;
-  cursor: pointer;
   transition:
     background-color var(--transition),
-    transform var(--transition),
+    border-color var(--transition),
     color var(--transition);
 }
 
-.btn-load-more:hover {
+.pagination__btn:hover:not(.active) {
+  border-color: var(--color-border-inverse);
   background-color: var(--color-border-inverse);
   color: var(--color-text-inverse);
 }
 
-.btn-load-more:hover svg {
-  transform: rotate(90deg);
-}
-
-.btn-load-more svg {
-  transition: transform var(--transition);
+.pagination__btn.active {
+  background-color: var(--color-border-inverse);
+  border-color: var(--color-border-inverse);
+  color: var(--color-text-inverse);
+  cursor: default;
 }
 
 /* ==== Product Modal ==== */

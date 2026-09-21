@@ -1,21 +1,21 @@
 <!doctype html>
 <html lang="en" data-theme="light">
   <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Menu — Coffee House</title>
-    <link rel="icon" href="assets/icons/logo-light.svg" type="image/svg+xml">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="icon" href="assets/icons/logo-light.svg" type="image/svg+xml" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       href="https://fonts.googleapis.com/css2?family=Inter:ital,wght@0,400;0,600;1,600&display=swap"
       rel="stylesheet"
-   >
-    <link rel="stylesheet" href="css/reset.css">
-    <link rel="stylesheet" href="css/variables.css">
-    <link rel="stylesheet" href="css/styles.css">
-    <link rel="stylesheet" href="css/responsive.css">
-    <link rel="stylesheet" href="css/menu.css">
+    />
+    <link rel="stylesheet" href="css/reset.css" />
+    <link rel="stylesheet" href="css/variables.css" />
+    <link rel="stylesheet" href="css/styles.css" />
+    <link rel="stylesheet" href="css/responsive.css" />
+    <link rel="stylesheet" href="css/menu.css" />
   </head>
   <body>
     <!-- Шапка сайту (спільна для обох сторінок) -->
@@ -28,14 +28,14 @@
             alt="Coffee House logo"
             width="100"
             height="60"
-         >
+          />
           <img
             class="logo__img logo__img--dark"
             src="assets/icons/logo-dark.svg"
             alt="Coffee House logo"
             width="100"
             height="60"
-         >
+          />
         </a>
 
         <nav class="nav" aria-label="Main navigation">
@@ -64,10 +64,10 @@
             aria-pressed="false"
           >
             <span class="theme-switch__icon theme-switch__icon--sun">
-              <img src="assets/icons/sun.svg" alt="" width="20" height="20">
+              <img src="assets/icons/sun.svg" alt="" width="20" height="20" />
             </span>
             <span class="theme-switch__icon theme-switch__icon--moon">
-              <img src="assets/icons/moon.svg" alt="" width="20" height="20">
+              <img src="assets/icons/moon.svg" alt="" width="20" height="20" />
             </span>
           </button>
 
@@ -81,7 +81,7 @@
               alt=""
               width="20"
               height="20"
-           >
+            />
           </a>
 
           <button
@@ -125,7 +125,7 @@
             alt=""
             width="32"
             height="32"
-         >
+          />
         </a>
       </nav>
     </div>
@@ -159,7 +159,7 @@
                   alt=""
                   width="30"
                   height="30"
-               >
+                />
               </span>
               <span>Coffee</span>
             </button>
@@ -177,7 +177,7 @@
                   alt=""
                   width="30"
                   height="30"
-               >
+                />
               </span>
               <span>Tea</span>
             </button>
@@ -195,7 +195,7 @@
                   alt=""
                   width="30"
                   height="30"
-               >
+                />
               </span>
               <span>Dessert</span>
             </button>
@@ -206,193 +206,23 @@
       <section class="menu-grid-section">
         <div class="container">
           <h2 class="visually-hidden">Menu items</h2>
+          <!-- Product cards are rendered dynamically by js/menu.js -->
           <div
             class="menu-grid"
             id="menuGrid"
             role="tabpanel"
             aria-label="Category items"
             tabindex="0"
-          >
-            <article class="product-card">
-              <div class="product-card__img-wrap">
-                <img
-                  class="product-card__img"
-                  src="assets/images/coffee-1.png"
-                  alt="Irish coffee"
-               >
-              </div>
-              <div class="product-card__body">
-                <div class="product-card__title">
-                  <h3>Irish coffee</h3>
-                  <p>
-                    Fragrant black coffee with Jameson Irish whiskey and whipped
-                    milk
-                  </p>
-                </div>
-                <p class="product-card__price">$7.00</p>
-              </div>
-            </article>
+          ></div>
 
-            <article class="product-card">
-              <div class="product-card__img-wrap">
-                <img
-                  class="product-card__img"
-                  src="assets/images/coffee-2.png"
-                  alt="Kahlua coffee"
-               >
-              </div>
-              <div class="product-card__body">
-                <div class="product-card__title">
-                  <h3>Kahlua coffee</h3>
-                  <p>
-                    Classic coffee with milk and Kahlua liqueur under a cap of
-                    frothed milk
-                  </p>
-                </div>
-                <p class="product-card__price">$7.00</p>
-              </div>
-            </article>
-
-            <article class="product-card">
-              <div class="product-card__img-wrap">
-                <img
-                  class="product-card__img"
-                  src="assets/images/coffee-3.png"
-                  alt="Honey raf"
-               >
-              </div>
-              <div class="product-card__body">
-                <div class="product-card__title">
-                  <h3>Honey raf</h3>
-                  <p>Espresso with frothed milk, cream and aromatic honey</p>
-                </div>
-                <p class="product-card__price">$5.50</p>
-              </div>
-            </article>
-
-            <article class="product-card">
-              <div class="product-card__img-wrap">
-                <img
-                  class="product-card__img"
-                  src="assets/images/coffee-4.png"
-                  alt="Ice cappuccino"
-               >
-              </div>
-              <div class="product-card__body">
-                <div class="product-card__title">
-                  <h3>Ice cappuccino</h3>
-                  <p>
-                    Cappuccino with soft thick foam in summer version with ice
-                  </p>
-                </div>
-                <p class="product-card__price">$5.00</p>
-              </div>
-            </article>
-
-            <article class="product-card">
-              <div class="product-card__img-wrap">
-                <img
-                  class="product-card__img"
-                  src="assets/images/coffee-5.png"
-                  alt="Espresso"
-               >
-              </div>
-              <div class="product-card__body">
-                <div class="product-card__title">
-                  <h3>Espresso</h3>
-                  <p>Classic black coffee</p>
-                </div>
-                <p class="product-card__price">$4.50</p>
-              </div>
-            </article>
-
-            <article class="product-card">
-              <div class="product-card__img-wrap">
-                <img
-                  class="product-card__img"
-                  src="assets/images/coffee-6.png"
-                  alt="Latte"
-               >
-              </div>
-              <div class="product-card__body">
-                <div class="product-card__title">
-                  <h3>Latte</h3>
-                  <p>
-                    Espresso coffee with the addition of steamed milk and dense
-                    milk foam
-                  </p>
-                </div>
-                <p class="product-card__price">$5.50</p>
-              </div>
-            </article>
-
-            <article class="product-card">
-              <div class="product-card__img-wrap">
-                <img
-                  class="product-card__img"
-                  src="assets/images/coffee-7.png"
-                  alt="Latte macchiato"
-               >
-              </div>
-              <div class="product-card__body">
-                <div class="product-card__title">
-                  <h3>Latte macchiato</h3>
-                  <p>Espresso with frothed milk and chocolate</p>
-                </div>
-                <p class="product-card__price">$5.50</p>
-              </div>
-            </article>
-
-            <article class="product-card">
-              <div class="product-card__img-wrap">
-                <img
-                  class="product-card__img"
-                  src="assets/images/coffee-8.png"
-                  alt="Coffee with cognac"
-               >
-              </div>
-              <div class="product-card__body">
-                <div class="product-card__title">
-                  <h3>Coffee with cognac</h3>
-                  <p>Fragrant black coffee with cognac and whipped cream</p>
-                </div>
-                <p class="product-card__price">$6.50</p>
-              </div>
-            </article>
-          </div>
-
-          <div class="menu-load-more" id="loadMoreContainer">
-            <button
-              class="btn-load-more"
-              id="loadMoreBtn"
-              type="button"
-              aria-label="Load more products"
-            >
-              <svg
-                class="refresh-icon"
-                width="24"
-                height="24"
-                viewBox="0 0 24 24"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  d="M21.8883 13.5C21.1645 17.6813 17.5027 20.75 13.1678 20.75C8.3826 20.75 4.5 16.8674 4.5 12.0822C4.5 7.29704 8.3826 3.41443 13.1678 3.41443C16.1434 3.41443 18.775 4.90805 20.3542 7.19502"
-                  stroke="currentColor"
-                  stroke-width="1.5"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                />
-                <path
-                  d="M17.0002 7.25H20.4002V3.85"
-                  stroke="currentColor"
-                  stroke-width="1.5"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                />
-              </svg>
-            </button>
-          </div>
+          <!-- Pagination is rendered dynamically by js/menu.js -->
+          <div
+            class="pagination"
+            id="pagination"
+            role="navigation"
+            aria-label="Menu pages"
+            hidden
+          ></div>
         </div>
       </section>
     </main>
@@ -416,7 +246,7 @@
                 alt=""
                 width="24"
                 height="24"
-             >
+              />
             </a>
             <a
               href="https://instagram.com"
@@ -429,7 +259,7 @@
                 alt=""
                 width="24"
                 height="24"
-             >
+              />
             </a>
             <a
               href="https://facebook.com"
@@ -442,7 +272,7 @@
                 alt=""
                 width="24"
                 height="24"
-             >
+              />
             </a>
           </div>
         </div>
@@ -456,7 +286,7 @@
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                <img src="assets/icons/pin.svg" alt="" width="20" height="20">
+                <img src="assets/icons/pin.svg" alt="" width="20" height="20" />
                 <span>8558 Green Rd., LA</span>
               </a>
             </li>
@@ -467,7 +297,7 @@
                   alt=""
                   width="20"
                   height="20"
-               >
+                />
                 <span>+1 (603) 555-0123</span>
               </a>
             </li>
@@ -478,7 +308,7 @@
                   alt=""
                   width="20"
                   height="20"
-               >
+                />
                 <span>Mon–Sat: 9:00–23:00</span>
               </span>
             </li>
@@ -501,7 +331,7 @@
             id="modalImg"
             src="assets/images/coffee-1.png"
             alt="Selected product"
-         >
+          />
         </div>
         <div class="product-modal__body">
           <div class="product-modal__title">
@@ -511,34 +341,15 @@
             </p>
           </div>
 
+          <!-- Size and additive options are rendered dynamically by js/menu.js -->
           <div class="modal-option-group">
             <p class="modal-option-group__label">Size</p>
-            <div class="modal-tabs" id="modalSizes">
-              <button type="button" class="tab-item active">
-                <span class="tab-item__icon">S</span><span>200 ml</span>
-              </button>
-              <button type="button" class="tab-item">
-                <span class="tab-item__icon">M</span><span>300 ml</span>
-              </button>
-              <button type="button" class="tab-item">
-                <span class="tab-item__icon">L</span><span>400 ml</span>
-              </button>
-            </div>
+            <div class="modal-tabs" id="modalSizes"></div>
           </div>
 
           <div class="modal-option-group">
             <p class="modal-option-group__label">Additives</p>
-            <div class="modal-tabs" id="modalAdditives">
-              <button type="button" class="tab-item">
-                <span class="tab-item__icon">1</span><span>Sugar</span>
-              </button>
-              <button type="button" class="tab-item">
-                <span class="tab-item__icon">2</span><span>Cinnamon</span>
-              </button>
-              <button type="button" class="tab-item">
-                <span class="tab-item__icon">3</span><span>Syrup</span>
-              </button>
-            </div>
+            <div class="modal-tabs" id="modalAdditives"></div>
           </div>
 
           <div class="modal-total">
@@ -547,7 +358,7 @@
           </div>
 
           <div class="modal-alert">
-            <img src="assets/icons/clock.svg" alt="" width="16" height="16">
+            <img src="assets/icons/clock.svg" alt="" width="16" height="16" />
             <p>
               The cost is not final. Download our mobile app to see the final
               price and place your order. Earn loyalty points and enjoy your
@@ -567,5 +378,8 @@
     </div>
 
     <script src="js/theme.js"></script>
+    <script src="js/burger.js"></script>
+    <script src="js/products.js"></script>
+    <script src="js/menu.js"></script>
   </body>
 </html>
