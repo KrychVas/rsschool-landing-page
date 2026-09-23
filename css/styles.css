@@ -14,7 +14,7 @@ body {
 }
 
 .container {
-  max-width: var(--container-max);
+  max-width: calc(var(--container-max) + 80px);
   margin: 0 auto;
   padding: 0 40px;
 }
@@ -34,7 +34,11 @@ main {
   display: flex;
   flex-direction: column;
   gap: var(--gap-section);
-  padding: 0 40px 40px;
+  padding: 0 0 40px;
+}
+
+footer.contacts {
+  padding: 0 0 40px;
 }
 
 /* ==== Header ==== */
@@ -290,11 +294,11 @@ main {
 
 .container-hero {
   position: relative;
-  max-width: var(--container-max);
+  max-width: calc(var(--container-max) + 80px);
   margin: 0 auto;
   border-radius: var(--radius-lg);
   overflow: hidden;
-  padding: 100px;
+  padding: 100px 40px;
   display: flex;
   align-items: center;
   min-height: 500px;
@@ -350,6 +354,12 @@ main {
 .btn-primary:hover {
   background-color: var(--color-accent);
   color: #403f3d;
+}
+
+.btn-primary__icon {
+  display: none;
+  width: 20px;
+  height: 20px;
 }
 
 /* ==== Section headings ==== */
