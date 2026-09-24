@@ -1,4 +1,3 @@
-/* ==== Base & Reset additions ==== */
 html {
   scroll-behavior: smooth;
 }
@@ -41,7 +40,6 @@ footer.contacts {
   padding: 0 0 40px;
 }
 
-/* ==== Header ==== */
 .site-header {
   position: relative;
   z-index: 100;
@@ -134,7 +132,6 @@ footer.contacts {
   gap: 24px;
 }
 
-/* Theme switcher button */
 .theme-switch {
   display: flex;
   align-items: center;
@@ -176,7 +173,6 @@ footer.contacts {
   background-color: var(--color-border-inverse);
 }
 
-/* Burger Button */
 .burger-btn {
   display: none;
   flex-direction: column;
@@ -222,7 +218,6 @@ footer.contacts {
   transform: translateY(-5px) rotate(-45deg);
 }
 
-/* ==== Mobile Menu Drawer ==== */
 .mobile-menu {
   position: fixed;
   top: 84px;
@@ -287,7 +282,6 @@ footer.contacts {
   color: var(--color-accent);
 }
 
-/* ==== Hero ==== */
 .hero {
   width: 100%;
 }
@@ -362,7 +356,6 @@ footer.contacts {
   height: 20px;
 }
 
-/* ==== Section headings ==== */
 .favorite-coffee h2,
 .about h2,
 .mobile-app h2 {
@@ -383,7 +376,6 @@ footer.contacts {
   gap: 40px;
 }
 
-/* ==== Slider ==== */
 .slider {
   display: flex;
   align-items: center;
@@ -497,7 +489,6 @@ footer.contacts {
   width: 100%;
 }
 
-/* ==== About ==== */
 .about-images {
   display: flex;
   gap: 40px;
@@ -537,7 +528,6 @@ footer.contacts {
   aspect-ratio: 660 / 430;
 }
 
-/* ==== Mobile App ==== */
 .mobile-app-inner {
   display: flex;
   align-items: center;
@@ -613,7 +603,6 @@ footer.contacts {
   object-fit: contain;
 }
 
-/* ==== Contacts / Footer ==== */
 .contacts-inner {
   background-color: var(--color-bg-container);
   border-radius: var(--radius-lg);

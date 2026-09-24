@@ -1,10 +1,3 @@
-/**
- * Home page coffee slider.
- *
- * - Cyclic prev/next navigation.
- * - Smooth sliding via CSS transform on the track.
- * - Dots reflect and control the current slide.
- */
 (function () {
   'use strict';
 
@@ -60,7 +53,6 @@
     });
   });
 
-  // Keyboard support.
   slider.addEventListener('keydown', function (event) {
     if (event.key === 'ArrowRight') next();
     if (event.key === 'ArrowLeft') prev();

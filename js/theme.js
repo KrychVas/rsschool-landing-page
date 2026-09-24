@@ -31,11 +31,9 @@
     try {
       localStorage.setItem(STORAGE_KEY, next);
     } catch (e) {
-      // localStorage may fail in restricted sandboxes
     }
   }
 
-  // Ініціалізація з localStorage або дефолтна 'light'
   var saved = null;
   try {
     saved = localStorage.getItem(STORAGE_KEY);

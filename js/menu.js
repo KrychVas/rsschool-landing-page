@@ -1,10 +1,3 @@
-/**
- * Catalog page logic: dynamic rendering, category tabs, pagination,
- * product modal with selectable options (size + additives).
- *
- * All card and modal content is built from a single product object taken from
- * `window.productsData`, so nothing is duplicated in the HTML markup.
- */
 (function () {
   'use strict';
 
@@ -12,11 +5,9 @@
 
   var data = window.productsData;
 
-  // Keep in sync with css/responsive.css.
   var MOBILE_MAX = 768;
   var MOBILE_PAGE_SIZE = 4;
 
-  // Elements.
   var grid = document.getElementById('menuGrid');
   var tabs = document.querySelectorAll('.menu-tabs .tab-item');
   var pagination = document.getElementById('pagination');
@@ -35,16 +26,11 @@
 
   var NO_IMAGE = 'assets/images/coffee-1.png';
 
-  // State.
   var currentCategory = 'coffee';
   var currentPage = 1;
   var activeProduct = null;
   var selectedSize = null;
   var selectedAdditives = [];
-
-  /* ------------------------------------------------------------------ */
-  /* Helpers                                                            */
-  /* ------------------------------------------------------------------ */
 
   function isMobile() {
     return window.innerWidth <= MOBILE_MAX;
@@ -62,7 +48,6 @@
     return '$' + value.toFixed(2);
   }
 
-  /** Number of items shown on a single page for the current viewport. */
   function pageSize() {
     return isMobile()
       ? MOBILE_PAGE_SIZE
@@ -76,10 +61,6 @@
       Math.ceil(categoryProducts(currentCategory).length / size),
     );
   }
-
-  /* ------------------------------------------------------------------ */
-  /* Grid rendering                                                     */
-  /* ------------------------------------------------------------------ */
 
   function createCard(product) {
     var card = document.createElement('article');
@@ -151,16 +132,11 @@
     });
   }
 
-  /* ------------------------------------------------------------------ */
-  /* Pagination                                                         */
-  /* ------------------------------------------------------------------ */
-
   function renderPagination() {
     if (!pagination) return;
 
     var pages = totalPages();
 
-    // No controls needed when everything fits on one page.
     if (pages <= 1) {
       pagination.innerHTML = '';
       pagination.hidden = true;
@@ -196,15 +172,6 @@
     renderPagination();
   }
 
-  /* ------------------------------------------------------------------ */
-  /* Category tabs                                                      */
-  /* ------------------------------------------------------------------ */
-
-  /**
-   * Resolve the category a tab points to. Prefer the explicit `data-category`
-   * attribute; fall back to the tab order so the tabs keep working even if the
-   * attribute is missing.
-   */
   function tabCategory(tab, index) {
     return tab.dataset.category || categories()[index];
   }
@@ -229,10 +196,6 @@
       });
     });
   }
-
-  /* ------------------------------------------------------------------ */
-  /* Modal                                                              */
-  /* ------------------------------------------------------------------ */
 
   function lockScroll() {
     document.body.style.overflow = 'hidden';
@@ -308,7 +271,6 @@
   function openModal(product) {
     activeProduct = product;
 
-    // Reset selections to the product's initial state.
     selectedSize = product.sizes.length ? product.sizes[0].code : null;
     selectedAdditives = [];
 
@@ -323,7 +285,6 @@
     buildOptions(modalSizes, product.sizes, 'size');
     buildOptions(modalAdditives, product.additives, 'additive');
 
-    // Mark the default size as active.
     modalSizes.querySelectorAll('.tab-item').forEach(function (btn) {
       btn.classList.toggle('active', btn.dataset.code === selectedSize);
     });
@@ -354,16 +315,11 @@
     });
   }
 
-  /* ------------------------------------------------------------------ */
-  /* Responsive handling                                                */
-  /* ------------------------------------------------------------------ */
 
   function handleResize() {
-    // Keep the current page valid for the new page size and re-render.
     var pages = totalPages();
     if (currentPage > pages) currentPage = pages;
 
-    // Close the mobile menu when leaving the mobile width.
     if (!isMobile() && mobileMenu && mobileMenu.classList.contains('open')) {
       mobileMenu.classList.remove('open');
       mobileMenu.hidden = true;
@@ -376,10 +332,6 @@
 
     render();
   }
-
-  /* ------------------------------------------------------------------ */
-  /* Init                                                               */
-  /* ------------------------------------------------------------------ */
 
   function init() {
     initTabs();

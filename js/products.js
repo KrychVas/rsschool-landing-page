@@ -1,19 +1,3 @@
-/**
- * Product data for the Coffee House catalog.
- * Each category contains a list of products. A single product object is used
- * both to render its card in the catalog grid and to build its modal window.
- *
- * Product shape:
- *   id          {string}  - unique identifier (also used as image name suffix)
- *   name        {string}  - display name
- *   description {string}  - short description shown on the card and in modal
- *   image       {string}  - path to the product image
- *   price       {number}  - base price in USD
- *   sizes       {Array}   - [{ code, label, modifier }] size options,
- *                           `modifier` is added to the base price
- *   additives   {Array}   - [{ code, label, price }] extra options,
- *                           `price` is added to the total when selected
- */
 window.productsData = {
   coffee: [
     {

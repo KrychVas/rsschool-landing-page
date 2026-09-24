@@ -1,6 +1,3 @@
-/* ==================================================
-   Tablet & Mobile Breakpoints (max-width: 768px)
-   ================================================== */
 @media (max-width: 768px) {
   .container {
     padding: 0 40px;
@@ -15,7 +12,6 @@
     padding: 0 0 40px;
   }
 
-  /* Header adjustments */
   .nav {
     display: none;
   }
@@ -28,7 +24,6 @@
     display: flex;
   }
 
-  /* Hero */
   .container-hero {
     padding: 60px 40px;
     min-height: auto;
@@ -42,7 +37,6 @@
     display: block;
   }
 
-  /* About */
   .about h2 {
     text-align: center;
   }
@@ -60,7 +54,6 @@
     height: 590px;
   }
 
-  /* Mobile App */
   .mobile-app-inner {
     flex-direction: column;
     text-align: left;
@@ -77,7 +70,6 @@
     width: 480px;
   }
 
-  /* Contacts */
   .contacts-inner {
     flex-direction: column;
     padding: 60px 40px;
@@ -91,9 +83,6 @@
   }
 }
 
-/* ==================================================
-   Small Mobile Breakpoint (max-width: 480px & 380px)
-   ================================================== */
 @media (max-width: 480px) {
   .container {
     padding: 0 16px;
@@ -130,7 +119,6 @@
     font-size: 28px;
   }
 
-  /* Hero */
   .container-hero {
     padding: 40px 16px;
     border-radius: var(--radius-md);
@@ -149,7 +137,6 @@
     padding: 18px 30px;
   }
 
-  /* Headings */
   .favorite-coffee h2,
   .about h2,
   .mobile-app h2,
@@ -159,7 +146,6 @@
     line-height: 1.25;
   }
 
-  /* Slider */
   .slider {
     gap: 12px;
   }
@@ -179,7 +165,6 @@
     max-width: 100%;
   }
 
-  /* Mobile App */
   .app-buttons {
     flex-direction: column;
     width: 100%;
@@ -189,7 +174,6 @@
     width: 100%;
   }
 
-  /* Contacts */
   .contacts-inner {
     padding: 60px 16px;
     border-radius: var(--radius-md);
@@ -201,12 +185,10 @@
     height: 48px;
   }
 
-  /* Menu Page */
   .product-card {
     max-width: 348px;
   }
 
-  /* Modal */
   .product-modal {
     padding: 12px;
   }
@@ -219,7 +201,7 @@
   }
 
   .product-modal__preview {
-    display: none; /* Hide large preview on small screens as in Figma design to ensure content readability */
+    display: none; 
   }
 
   .product-modal__body {
